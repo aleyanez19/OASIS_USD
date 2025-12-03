@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OASIS - Organization for Action in Sustainability and Innovation Society</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;600;700&family=Crimson+Pro:ital,wght@0,400;1,300&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Instrument Sans', sans-serif;
+            background: linear-gradient(135deg, #f5f0e8 0%, #ebe4d1 100%);
+            color: #3a3a3a;
+            min-height: 100vh;
+        }
+        
+        header {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            padding: 1.5rem 3rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(139, 123, 85, 0.1);
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .logo {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #8b7b55;
+            letter-spacing: 2px;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 3rem;
+            list-style: none;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: #5a5a5a;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: color 0.3s ease;
+            letter-spacing: 0.5px;
+        }
+        
+        .nav-links a:hover {
+            color: #8b7b55;
+        }
+        
+        main {
+            margin-top: 100px;
+            padding: 4rem 3rem;
+        }
+        
+        .hero {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+            padding: 4rem 2rem;
+        }
+        
+        h1 {
+            font-size: 5rem;
+            font-weight: 700;
+            color: #8b7b55;
+            margin-bottom: 1rem;
+            letter-spacing: 1px;
+        }
+        
+        .subtitle {
+            font-family: 'Crimson Pro', serif;
+            font-style: italic;
+            font-size: 1.8rem;
+            color: #6a6a6a;
+            font-weight: 300;
+            margin-bottom: 3rem;
+            line-height: 1.6;
+        }
+        
+        .description {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #5a5a5a;
+            font-weight: 400;
+        }
+        
+        .page-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+            display: none;
+        }
+        
+        .page-content.active {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        h2 {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #8b7b55;
+            margin-bottom: 2rem;
+        }
+        
+        .pillars {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        
+        .pillar {
+            background: rgba(255, 255, 255, 0.5);
+            padding: 2rem;
+            border-radius: 12px;
+            border: 1px solid rgba(139, 123, 85, 0.2);
+        }
+        
+        .pillar h3 {
+            font-size: 1.5rem;
+            color: #8b7b55;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+        
+        .pillar ul {
+            list-style: none;
+            color: #6a6a6a;
+            line-height: 1.8;
+        }
+        
+        .pillar li:before {
+            content: "→ ";
+            color: #8b7b55;
+        }
+        
+        .mission-vision {
+            margin: 3rem 0;
+        }
+        
+        .mission-vision div {
+            background: rgba(255, 255, 255, 0.5);
+            padding: 2rem;
+            border-radius: 12px;
+            margin-bottom: 2rem;
+            border-left: 4px solid #8b7b55;
+        }
+        
+        .mission-vision h3 {
+            font-size: 1.8rem;
+            color: #8b7b55;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+        
+        .mission-vision p {
+            font-family: 'Crimson Pro', serif;
+            font-style: italic;
+            font-size: 1.2rem;
+            color: #5a5a5a;
+            line-height: 1.8;
+        }
+        
+        .contact-info {
+            background: rgba(255, 255, 255, 0.5);
+            padding: 3rem;
+            border-radius: 12px;
+            margin: 2rem 0;
+        }
+        
+        .contact-info p {
+            font-size: 1.1rem;
+            line-height: 2;
+            color: #5a5a5a;
+        }
+        
+        @media (max-width: 768px) {
+            h1 { font-size: 3rem; }
+            .subtitle { font-size: 1.3rem; }
+            .nav-links { gap: 1.5rem; }
+            header { padding: 1rem 1.5rem; }
+            main { padding: 2rem 1rem; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">OASIS</div>
+            <ul class="nav-links">
+                <li><a href="#" onclick="showPage('home')">Home</a></li>
+                <li><a href="#" onclick="showPage('about')">About Us</a></li>
+                <li><a href="#" onclick="showPage('contact')">Contact Us</a></li>
+                <li><a href="#" onclick="showPage('more')">More Information</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div id="home" class="page-content active">
+            <div class="hero">
+                <h1>OASIS</h1>
+                <p class="subtitle">Organization for Action in Sustainability and Innovation Society</p>
+                <p class="description">
+                    A USD student collective bridging environmental awareness with hands-on action through engineering, 
+                    sustainability practices, creative expression, and community building. We empower students to become 
+                    environmental changemakers locally and beyond.
+                </p>
+            </div>
+        </div>
+
+        <div id="about" class="page-content">
+            <h2>About Us</h2>
+            
+            <div class="mission-vision">
+                <div>
+                    <h3>Our Mission</h3>
+                    <p>To cultivate a culture of sustainability at USD through transformative experiences that connect students with the ocean, land, and regenerative technologies, turning environmental awareness into community action.</p>
+                </div>
+                
+                <div>
+                    <h3>Our Vision</h3>
+                    <p>To be the leading student-led environmental innovation hub in San Diego, where every USD student has access to meaningful experiences that empower them as agents of environmental change in their communities.</p>
+                </div>
+            </div>
+
+            <h3 style="font-size: 2rem; color: #8b7b55; margin: 3rem 0 2rem;">Our Four Pillars</h3>
+            
+            <div class="pillars">
+                <div class="pillar">
+                    <h3>🔬 Engineering & Innovation</h3>
+                    <ul>
+                        <li>Biotron technology</li>
+                        <li>Sustainable materials research</li>
+                        <li>Bio-design solutions</li>
+                        <li>Regenerative technology</li>
+                    </ul>
+                </div>
+                
+                <div class="pillar">
+                    <h3>🌱 Environmental Sustainability</h3>
+                    <ul>
+                        <li>Campus composting</li>
+                        <li>Ocean conservation</li>
+                        <li>Beach cleanups</li>
+                        <li>Eco-materials implementation</li>
+                    </ul>
+                </div>
+                
+                <div class="pillar">
+                    <h3>🎨 Art & Creative Expression</h3>
+                    <ul>
+                        <li>Bio-art installations</li>
+                        <li>Environmental storytelling</li>
+                        <li>Sustainability campaigns</li>
+                        <li>Interdisciplinary projects</li>
+                    </ul>
+                </div>
+                
+                <div class="pillar">
+                    <h3>🤝 Community & Leadership</h3>
+                    <ul>
+                        <li>Alumni mentorship panels</li>
+                        <li>Networking events</li>
+                        <li>Workshops</li>
+                        <li>Ocean experiences</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div id="contact" class="page-content">
+            <h2>Contact Us</h2>
+            <div class="contact-info">
+                <p><strong>Get Involved</strong></p>
+                <p>We're always looking for passionate students to join our community!</p>
+                <br>
+                <p><strong>Email:</strong> oasis@sandiego.edu</p>
+                <p><strong>Location:</strong> University of San Diego</p>
+                <p><strong>San Diego, California</strong></p>
+                <br>
+                <p>Follow us on social media to stay updated on upcoming events, projects, and opportunities to make a difference.</p>
+            </div>
+        </div>
+
+        <div id="more" class="page-content">
+            <h2>More Information</h2>
+            
+            <div class="mission-vision">
+                <div>
+                    <h3>What OASIS Is</h3>
+                    <p>A student collective focused on environmental sustainability and climate action. A community that connects students with nature and eco-conscious practices. An experience laboratory from whale watching to sustainable technology. A bridge between environmental awareness and tangible action.</p>
+                </div>
+                
+                <div>
+                    <h3>What OASIS Is NOT</h3>
+                    <p>Just a traditional recycling or composting club. A purely academic/theoretical organization. Exclusive to environmental science students. A confrontational activist group. Just occasional events without continuity.</p>
+                </div>
+                
+                <div>
+                    <h3>Our Projects</h3>
+                    <p>Whale watching expeditions in La Paz, surf sessions and beach cleanups, campus composting systems, digital sustainability campaigns, Biotron plant-music installations using Playtronica technology, bio-design workshops, alumni mentorship programs, and sustainable materials research.</p>
+                </div>
+                
+                <div>
+                    <h3>Join Us</h3>
+                    <p>OASIS welcomes students from all majors and backgrounds. Whether you're passionate about engineering, art, community building, or simply curious about sustainability, there's a place for you in our oasis. Together, we're creating a greener, more innovative future for USD and beyond.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        function showPage(pageId) {
+            // Hide all pages
+            const pages = document.querySelectorAll('.page-content');
+            pages.forEach(page => page.classList.remove('active'));
+            
+            // Show selected page
+            document.getElementById(pageId).classList.add('active');
+            
+            // Smooth scroll to top
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
