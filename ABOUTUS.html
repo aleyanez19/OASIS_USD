@@ -246,32 +246,87 @@
     </header>
 
     <main>
-        <div id="home" class="page-content active">
-            <div class="hero">
-                <h1>OASIS</h1>
-                <p class="subtitle">Organization for Action in Sustainability and Innovation Society</p>
-                <p class="description">
-                    A USD student collective bridging environmental awareness with hands-on action through engineering,
-                    sustainability practices, creative expression, and community building. We empower students to become
-                    environmental changemakers locally and beyond.
-                </p>
+
+        <div id="about" class="page-content">
+            <h2>About Us</h2>
+
+            <div class="mission-vision">
+                <div>
+                    <h3>Our Mission</h3>
+                    <p>To cultivate a culture of sustainability at USD through transformative experiences that connect
+                        students
+                        with the ocean, land, and regenerative technologies, turning environmental awareness into
+                        community
+                        action.</p>
+                </div>
+
+                <div>
+                    <h3>Our Vision</h3>
+                    <p>To be the leading student-led environmental innovation hub in San Diego, where every USD student
+                        has
+                        access to meaningful experiences that empower them as agents of environmental change in their
+                        communities.</p>
+                </div>
+            </div>
+
+            <h3 style="font-size: 2rem; color: #8b7b55; margin: 3rem 0 2rem;">Our Four Pillars</h3>
+
+            <div class="pillars">
+                <div class="pillar">
+                    <h3>🔬 Engineering & Innovation</h3>
+                    <ul>
+                        <li>Biotron technology</li>
+                        <li>Sustainable materials research</li>
+                        <li>Bio-design solutions</li>
+                        <li>Regenerative technology</li>
+                    </ul>
+                </div>
+
+                <div class="pillar">
+                    <h3>🌱 Environmental Sustainability</h3>
+                    <ul>
+                        <li>Campus composting</li>
+                        <li>Ocean conservation</li>
+                        <li>Beach cleanups</li>
+                        <li>Eco-materials implementation</li>
+                    </ul>
+                </div>
+
+                <div class="pillar">
+                    <h3>🎨 Art & Creative Expression</h3>
+                    <ul>
+                        <li>Bio-art installations</li>
+                        <li>Environmental storytelling</li>
+                        <li>Sustainability campaigns</li>
+                        <li>Interdisciplinary projects</li>
+                    </ul>
+                </div>
+
+                <div class="pillar">
+                    <h3>🤝 Community & Leadership</h3>
+                    <ul>
+                        <li>Alumni mentorship panels</li>
+                        <li>Networking events</li>
+                        <li>Workshops</li>
+                        <li>Ocean experiences</li>
+                    </ul>
+                </div>
             </div>
         </div>
-    </main>
+        <main>
+            <script>
+                function showPage(pageId) {
+                    // Hide all pages
+                    const pages = document.querySelectorAll('.page-content');
+                    pages.forEach(page => page.classList.remove('active'));
 
-    <script>
-        function showPage(pageId) {
-            // Hide all pages
-            const pages = document.querySelectorAll('.page-content');
-            pages.forEach(page => page.classList.remove('active'));
+                    // Show selected page
+                    document.getElementById(pageId).classList.add('active');
 
-            // Show selected page
-            document.getElementById(pageId).classList.add('active');
-
-            // Smooth scroll to top
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        }
-    </script>
+                    // Smooth scroll to top
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                }
+            </script>
 </body>
 
 </html>

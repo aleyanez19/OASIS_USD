@@ -246,32 +246,34 @@
     </header>
 
     <main>
-        <div id="home" class="page-content active">
-            <div class="hero">
-                <h1>OASIS</h1>
-                <p class="subtitle">Organization for Action in Sustainability and Innovation Society</p>
-                <p class="description">
-                    A USD student collective bridging environmental awareness with hands-on action through engineering,
-                    sustainability practices, creative expression, and community building. We empower students to become
-                    environmental changemakers locally and beyond.
-                </p>
+        <div id="contact" class="page-content">
+            <h2>Contact Us</h2>
+            <div class="contact-info">
+                <p><strong>Get Involved</strong></p>
+                <p>We're always looking for passionate students to join our community!</p>
+                <br>
+                <p><strong>Email:</strong> oasis@sandiego.edu</p>
+                <p><strong>Location:</strong> University of San Diego</p>
+                <p><strong>San Diego, California</strong></p>
+                <br>
+                <p>Follow us on social media to stay updated on upcoming events, projects, and opportunities to make a
+                    difference.</p>
             </div>
         </div>
-    </main>
+        <main>
+            <script>
+                function showPage(pageId) {
+                    // Hide all pages
+                    const pages = document.querySelectorAll('.page-content');
+                    pages.forEach(page => page.classList.remove('active'));
 
-    <script>
-        function showPage(pageId) {
-            // Hide all pages
-            const pages = document.querySelectorAll('.page-content');
-            pages.forEach(page => page.classList.remove('active'));
+                    // Show selected page
+                    document.getElementById(pageId).classList.add('active');
 
-            // Show selected page
-            document.getElementById(pageId).classList.add('active');
-
-            // Smooth scroll to top
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        }
-    </script>
+                    // Smooth scroll to top
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                }
+            </script>
 </body>
 
 </html>
